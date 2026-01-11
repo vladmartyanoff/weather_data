@@ -1,14 +1,37 @@
+import requests
+import config.global_config
+from config.global_config import URL_city_to_location
+
+
 #Создаем класс в котором отражаем перечень городов
 class City_list():
     __city_list: list
+    __city_location: dict
+    __state_code: str
+    __country_code: str
+    __limit: str
+    list_of_cities_with_locations: list
 
     #Для создания класса нужно будет ввести первый город
     def __init__(self, first_city):
+        self.__API_key = config.global_config.API_key
+        self.__state_code = config.global_config.state_code
+        self.__country_code = config.global_config.country_code
+        self.__limit = config.global_config.limit
         self.__city_list = [first_city]
+        self.__city_location = {
+            "city_name": "",
+            "city_lat": "",
+            "city_lon": ""
+        }
+        self.__list_of_cities_with_locations = []
 
     #Создаем геттер для проверки листа с городами
     def city_check(self):
         return self.__city_list
+
+    def location_check(self):
+        return self.__city_location
 
     #Создаем функцию для добавления города в лист и исключаем повторения
     def add_city_to_list(self, city):
@@ -30,3 +53,28 @@ class City_list():
                 print("Такого города нет в перечне, либо название введено неверно")
         except Exception as e:
             print(f'Не удалось выполнить операцию. Ошибка {e}')
+
+    # Создаем функцию для получения словаря - город, координаты и добавления его в лист словарей
+    def dict_fullfill(self):
+        for one_element in self.__city_list:
+            self.__city_location["city_name"] = str(one_element)
+            print(one_element)
+            try:
+                city_name = str(one_element)
+                r = requests.get(url= f'{URL_city_to_location}direct?q={city_name},{self.__state_code},{self.__country_code}&limit={self.__limit}&appid={self.__API_key}')
+                request_result = r.json()
+                if r.status_code == 200:
+                    lat = request_result[0]['lat']
+                    lon = request_result[0]['lon']
+                    self.__city_location["city_lat"] = str(lat)
+                    self.__city_location["city_lon"] = str(lon)
+                    print(f"Координаты города {city_name} = {lat}; {lon}")
+                    print(self.__city_location)
+                    try:
+                        self.__list_of_cities_with_locations.append(self.__city_location)
+                        print(f"Текущий лист городов {self.__list_of_cities_with_locations}")
+                    except Exception as e:
+                        print(f'Не удалось выполнить операцию. Ошибка {e}')
+            except Exception as e:
+                print(f'Не удалось выполнить операцию. Ошибка {e}')
+
