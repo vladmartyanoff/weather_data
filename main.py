@@ -7,8 +7,9 @@ from config.global_config import URL_city_to_location, city_name, state_code, co
 
 list_1 = City_list("Moscow")
 list_1.add_city_to_list("Prague")
+list_1.add_city_to_list("Dublin")
 list_1.city_check()
 list_1.dict_fullfill()
-list_1.location_check()
+
 
 
