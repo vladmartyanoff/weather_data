@@ -1,17 +1,17 @@
 [
-    {
-        "city_name": "Moscow",
-        "city_lat": "55.7504461",
-        "city_lon": "37.6174943"
-    },
-    {
-        "city_name": "Prague",
-        "city_lat": "50.0874654",
-        "city_lon": "14.4212535"
-    },
-    {
-        "city_name": "Dublin",
-        "city_lat": "53.3498006",
-        "city_lon": "-6.2602964"
-    }
+  {
+    "city_name": "Moscow",
+    "city_lat": "55.7504461",
+    "city_lon": "37.6174943"
+  },
+  {
+    "city_name": "Prague",
+    "city_lat": "50.0874654",
+    "city_lon": "14.4212535"
+  },
+  {
+    "city_name": "Dublin",
+    "city_lat": "53.3498006",
+    "city_lon": "-6.2602964"
+  }
 ]
