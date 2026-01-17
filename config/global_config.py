@@ -1,7 +1,7 @@
 API_key = "ed34fb09af38fb4e532ee24f4198fe89"
 lat = ""
 lon = ""
-URL_weather_check = f"https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API_key}"
+URL_weather_check = f"https://api.openweathermap.org/data/2.5/"
 city_name = ""
 state_code = ""
 country_code = ""

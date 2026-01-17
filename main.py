@@ -1,8 +1,8 @@
 from classes.city_weather import City_weather
 
-Test = City_weather
-Test.list_filling("")
-
+test = City_weather()
+test.list_filling()
+test.weather_check()
 
 
 
