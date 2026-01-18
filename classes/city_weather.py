@@ -1,5 +1,5 @@
 import json
-from itertools import count
+import datetime
 import config.global_config
 from config.global_config import URL_weather_check
 import requests
@@ -47,8 +47,8 @@ class City_weather():
                         rounded_temp = round(temp, 2)
                         pressure = weather["pressure"]
                         humidity = weather["humidity"]
-                        print(rounded_temp)
-                    print(request_result)
+                        current_date_time = datetime.datetime.now().isoformat(timespec='seconds')
+                        print(f' {current_date_time} -- В городе {self.__city_name} температура воздуха {rounded_temp}C°, атмосферное давление - {pressure} Па, влажность воздуха - {humidity}%')
                 except Exception as e:
                     print(e)
         else:
