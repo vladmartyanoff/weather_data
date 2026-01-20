@@ -1,5 +1,4 @@
 import json
-
 import requests
 import config.global_config
 from config.global_config import URL_city_to_location
