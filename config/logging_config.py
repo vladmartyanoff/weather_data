@@ -1,8 +1,8 @@
-import logging
+import logging.config
 import os
 
 #Задаем параметры логирования
-LOGGING_CONFIG = {
+logging_config = {
     #Версия схемы (обязательно единица иначе падает в ошибку - не знаю почему)
     'version': 1,
 
@@ -10,9 +10,10 @@ LOGGING_CONFIG = {
     'disable_existing_loggers': False,
 
     # Создаем шаблон сообщений
+            # "asctime" - время запроса, "levelname" - уровень (инфо\дебаг\ошибка), "name" - в каком файле ошибка, "lineno" - номер строки в коде, "message" - текст лога
     'formatters': {
         'detailed': {
-            'format': # "asctime" - время запроса, "levelname" - уровень (инфо\дебаг\ошибка), "name" - в каком файле ошибка, "lineno" - номер строки в коде, "message" - текст лога
+            'format':
                 '%(asctime)s [%(levelname)s] %(name)s:%(lineno)d - %(message)s'
         }
     },
@@ -48,6 +49,13 @@ LOGGING_CONFIG = {
             'formatter': 'detailed'
         }
     },
+    # Создаем корень куда будут падать все логи неизвестных модулей
+    'root':{
+        # От уровня INFO
+        'level': 'INFO',
+        # Пишем и в консоль и в файлы
+        'handlers': ['console', 'file']
+    },
     # Привязываем логи к рабочим файлам
     'loggers': {
         # Параметры для файла "city_weather"
@@ -79,5 +87,8 @@ LOGGING_CONFIG = {
 }
 
 def setup_logging():
+
+    log_dir = os.path.dirname(logging_config['handlers']['file']['filename'])
+    os.makedirs(log_dir, exist_ok=True)
     #Инициализация логирования
-    logging.config.dictConfig(LOGGING_CONFIG)
+    logging.config.dictConfig(logging_config)
