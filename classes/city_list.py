@@ -2,6 +2,9 @@ import json
 import requests
 import config.global_config
 from config.global_config import URL_city_to_location
+import logging
+
+logger = logging.getLogger("classes.city_list")
 
 
 #Создаем класс в котором отражаем перечень городов
@@ -33,9 +36,9 @@ class City_list():
             self.__city_list.append(str(city))
             set(self.__city_list)
             list(self.__city_list)
-            print(f"Город успешно добавлен. Текущий лист городов: {self.city_check()} ")
+            logger.info(f"Город успешно добавлен. Текущий лист городов: {self.city_check()} ")
         except Exception as e:
-            print(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
 
     #Создаем функцию для удаления некорректных названий из листа
     def remove_city_from_list(self, city):
@@ -44,9 +47,9 @@ class City_list():
                 if one_element in self.__city_list:
                     self.__city_list.remove(city)
             else:
-                print("Такого города нет в перечне, либо название введено неверно")
+                logger.info("Такого города нет в перечне, либо название введено неверно")
         except Exception as e:
-            print(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
 
     # Создаем функцию для получения словаря - город, координаты и добавления его в лист словарей
     def dict_fullfill(self):
@@ -68,18 +71,18 @@ class City_list():
                     lon = request_result[0]['lon']
                     __city_location["city_lat"] = str(lat)
                     __city_location["city_lon"] = str(lon)
-                    print(f"Координаты города {city_name} = {lat}; {lon}")
-                    print(__city_location)
+                    logger.info(f"Координаты города {city_name} = {lat}; {lon}")
+                    logger.info(__city_location)
                     # Добавляем словарь с городом в общий лист
                     self.__list_of_cities_with_locations.append(__city_location)
             except Exception as e:
-                print(f'Не удалось выполнить операцию. Ошибка {e}')
+                logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
         try:
             # Записываем полученный лист со словарями во внешний джисон-файл
             with open(r"C:\Users\Vlad\PycharmProjects\weather_data\config\cities_locations.json", 'w',
                       encoding="utf-8") as cl:
                 json.dump(self.__list_of_cities_with_locations, cl, ensure_ascii = False, indent = 2) #Indent - отступы для удобного чтения
-                print("Данные сохранены в cities_locations.json")
+                logger.info("Данные сохранены в cities_locations.json")
         except Exception as e:
-            print(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
 

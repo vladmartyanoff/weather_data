@@ -43,6 +43,10 @@ logging_config = {
             'mode': 'a',
             # Вывод сообщений на русском языке
             'encoding': 'utf-8',
+            # Ограничение по размеру файла - 10Мб
+            'maxBytes': 10*1024*1024,
+            # Ограничение по количеству файлов - 5, самые старые перезаписываются
+            'backupCount': 5,
             # Вывод сообщений не ниже уровня "DEBUG"
             'level': 'DEBUG',
             # Вывод сообщений в формате "detailed" который указали выше
@@ -59,7 +63,7 @@ logging_config = {
     # Привязываем логи к рабочим файлам
     'loggers': {
         # Параметры для файла "city_weather"
-        'city_weather': {
+        'classes.city_weather': {
             # Вывод сообщений не ниже уровня "DEBUG"
             'level': 'DEBUG',
             # Вывод и в консоль и в файл
@@ -75,7 +79,7 @@ logging_config = {
             'handlers': ['console', 'file']
         },
         # Параметры для файла "city_weather"
-        'city_list': {
+        'classes.city_list': {
             # Вывод сообщений не ниже уровня "DEBUG"
             'level': 'DEBUG',
             # Вывод и в консоль и в файл

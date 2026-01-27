@@ -5,13 +5,23 @@
     "city_lon": "37.6174943"
   },
   {
-    "city_name": "Prague",
-    "city_lat": "50.0874654",
-    "city_lon": "14.4212535"
-  },
-  {
     "city_name": "Dublin",
     "city_lat": "53.3498006",
     "city_lon": "-6.2602964"
+  },
+  {
+    "city_name": "Tokio",
+    "city_lat": "35.6768601",
+    "city_lon": "139.7638947"
+  },
+  {
+    "city_name": "London",
+    "city_lat": "51.5073219",
+    "city_lon": "-0.1276474"
+  },
+  {
+    "city_name": "Washington",
+    "city_lat": "38.8950368",
+    "city_lon": "-77.0365427"
   }
 ]
