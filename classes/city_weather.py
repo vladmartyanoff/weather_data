@@ -32,7 +32,7 @@ class City_weather():
         self.__weather_list = []
 
     # Создаем функцию заполнения листа с координатами городов из файла
-    def list_filling(self, __filename = r"C:\Users\Vlad\PycharmProjects\weather_data\config\cities_locations.json"):
+    def list_filling(self, __filename = os.path.join(os.path.dirname(__file__), '../config/cities_locations.json')):
         try:
             with open(__filename, "r", encoding= "utf-8") as file:
                 self.__list_of_cities_with_locations = json.load(file)
@@ -40,12 +40,13 @@ class City_weather():
                 element_count = len(self.__list_of_cities_with_locations)
                 logger.info(f"Количество элементов в листе = {element_count}")
         except Exception as e:
-            logger.info(e)
+            logger.error(e)
 
     # Создаем функцию для проверки погоды для городов в листе
     def weather_check(self):
         # Задаем директорию куда будем выгружать результаты
-        results_directory = r"C:\Users\Vlad\PycharmProjects\weather_data\results"
+        project_root = os.path.dirname(os.path.dirname(__file__))
+        results_directory = os.path.join(project_root, "results")
         # Проверяем существует ли директория, если не существует то будет создаваться
         os.makedirs(results_directory, exist_ok=True)
         try:
@@ -93,18 +94,19 @@ class City_weather():
                             self.__weather_list.append(__city_weather_dict)
                     # Обрабатываем исключения
                     except Exception as api_e:
-                        logger.info(f"Ошибка API:{api_e}")
+                        logger.error(f"Ошибка API:{api_e}")
                 # Задаем путь для записис CSV файла
-                csv_path = os.path.join(results_directory, f"weather_{safe_filename}.csv")
+                csv_filename = f"weather_{safe_filename}.csv"
+                csv_path = os.path.join(results_directory, csv_filename)
                 # Переводим лист в датафрейм
                 data_framed_list = pd.DataFrame(self.__weather_list)
                 # Записываем файл и отчитываемся о выполнении
                 data_framed_list.to_csv(csv_path, index = False, encoding="utf-8")
                 logger.info(f"Файл успешно сохранен в {csv_path}")
             else:
-                logger.info("Словарь пуст")
+                logger.error("Словарь пуст")
         except Exception as e:
-            logger.info(f"Ошибка: {e}")
+            logger.error(f"Ошибка: {e}")
 
 
 

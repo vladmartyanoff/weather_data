@@ -3,6 +3,7 @@ import requests
 import config.global_config
 from config.global_config import URL_city_to_location
 import logging
+import os
 
 logger = logging.getLogger("classes.city_list")
 
@@ -38,7 +39,7 @@ class City_list():
             list(self.__city_list)
             logger.info(f"Город успешно добавлен. Текущий лист городов: {self.city_check()} ")
         except Exception as e:
-            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.error(f'Не удалось выполнить операцию. Ошибка {e}')
 
     #Создаем функцию для удаления некорректных названий из листа
     def remove_city_from_list(self, city):
@@ -49,7 +50,7 @@ class City_list():
             else:
                 logger.info("Такого города нет в перечне, либо название введено неверно")
         except Exception as e:
-            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.error(f'Не удалось выполнить операцию. Ошибка {e}')
 
     # Создаем функцию для получения словаря - город, координаты и добавления его в лист словарей
     def dict_fullfill(self):
@@ -76,13 +77,14 @@ class City_list():
                     # Добавляем словарь с городом в общий лист
                     self.__list_of_cities_with_locations.append(__city_location)
             except Exception as e:
-                logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
+                logger.error(f'Не удалось выполнить операцию. Ошибка {e}')
         try:
             # Записываем полученный лист со словарями во внешний джисон-файл
-            with open(r"C:\Users\Vlad\PycharmProjects\weather_data\config\cities_locations.json", 'w',
+            json_path = os.path.join(os.path.dirname(__file__), '../config/cities_locations.json')
+            with open(json_path, 'w',
                       encoding="utf-8") as cl:
                 json.dump(self.__list_of_cities_with_locations, cl, ensure_ascii = False, indent = 2) #Indent - отступы для удобного чтения
                 logger.info("Данные сохранены в cities_locations.json")
         except Exception as e:
-            logger.info(f'Не удалось выполнить операцию. Ошибка {e}')
+            logger.error(f'Не удалось выполнить операцию. Ошибка {e}')
 
