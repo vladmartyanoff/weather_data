@@ -1,4 +1,5 @@
 import logging.config
+from logging.handlers import RotatingFileHandler
 import os
 
 #Задаем параметры логирования
@@ -36,7 +37,7 @@ logging_config = {
         'file': {
 
             # Вывод во внешний файл
-            'class': 'logging.FileHandler',
+            'class': 'logging.handlers.RotatingFileHandler',
             # Путь к файлу и название
             'filename': os.path.join(os.path.dirname(__file__), '../logs/app.log'),
             # Тип "а" - добавление записей ("w" - перезапись)
