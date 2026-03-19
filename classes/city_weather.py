@@ -1,5 +1,8 @@
 import json
 import datetime
+
+from numpy.ma.core import append
+
 import config.global_config
 from config.global_config import URL_weather_check
 import requests
@@ -7,6 +10,14 @@ import pandas as pd
 import re
 import os
 import logging
+from sqlalchemy import create_engine, false
+from config.db_connection import db_connection_url
+from classes.table import Base, City_weather_table
+
+#Создаем соединение с базой данных
+engine = create_engine(f'{db_connection_url}')
+
+Base.metadata.create_all(engine)
 
 #Задаем логирование для класса
 logger = logging.getLogger("classes.city_weather")
@@ -34,7 +45,7 @@ class City_weather():
     # Создаем функцию заполнения листа с координатами городов из файла
     def list_filling(self, __filename = os.path.join(os.path.dirname(__file__), '../config/cities_locations.json')):
         try:
-            with open(__filename, "r", encoding= "utf-8") as file:
+            with open(__filename, "r", encoding="utf-8") as file:
                 self.__list_of_cities_with_locations = json.load(file)
                 logger.info(f"Лист заполнен успешно:{self.__list_of_cities_with_locations} ")
                 element_count = len(self.__list_of_cities_with_locations)
@@ -72,7 +83,7 @@ class City_weather():
                         self.__lon = one_element.get("city_lon")
                         self.__city_name = one_element.get("city_name")
                         # Делаем запрос к API
-                        r = requests.get (url= f"{URL_weather_check}weather?lat={self.__lat}&lon={self.__lon}&appid={self.__API_key}")
+                        r = requests.get (url=f"{URL_weather_check}weather?lat={self.__lat}&lon={self.__lon}&appid={self.__API_key}")
                         request_result = r.json()
                         # Если ответ удовлетворительный записываем значения в пустой словарь
                         if r.status_code == 200:
@@ -101,8 +112,12 @@ class City_weather():
                 # Переводим лист в датафрейм
                 data_framed_list = pd.DataFrame(self.__weather_list)
                 # Записываем файл и отчитываемся о выполнении
-                data_framed_list.to_csv(csv_path, index = False, encoding="utf-8")
+                data_framed_list.to_csv(csv_path, index=False, encoding="utf-8")
                 logger.info(f"Файл успешно сохранен в {csv_path}")
+                # Записываем в базу данных и отчитываемся о выполнении
+                try: data_framed_list.to_sql('City_weather_data', engine, if_exists='append', index=False, method='multi')
+                except Exception as e:
+                    logger.error(f"Ошибка записи в базу данных {e}")
             else:
                 logger.error("Словарь пуст")
         except Exception as e:

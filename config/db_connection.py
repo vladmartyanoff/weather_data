@@ -1,0 +1,1 @@
+db_connection_url = 'postgresql://v_airflow_admin:18191617@185.12.95.120:5432/airflow'
