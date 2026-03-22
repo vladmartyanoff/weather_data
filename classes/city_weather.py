@@ -14,6 +14,9 @@ from sqlalchemy import create_engine, false
 from config.db_connection import db_connection_url
 from classes.table import Base, City_weather_table
 
+#Задаем логирование для класса
+logger = logging.getLogger("classes.city_weather")
+
 #Создаем соединение с базой данных
 try:
     engine = create_engine(f'{db_connection_url}')
@@ -21,9 +24,6 @@ try:
 
 except Exception as e:
     logger.error(f"Ошибка соединения с базой данных {e}")
-
-#Задаем логирование для класса
-logger = logging.getLogger("classes.city_weather")
 
 #Создаем класс
 class City_weather():
