@@ -70,3 +70,173 @@
 2026-01-28 21:58:45,124 [INFO] classes.city_weather:92 -  2026-01-28T21:58:43 -- В городе London температура воздуха 9.1C°, атмосферное давление - 995 Па, влажность воздуха - 76%
 2026-01-28 21:58:45,425 [INFO] classes.city_weather:92 -  2026-01-28T21:58:43 -- В городе Washington температура воздуха -7.09C°, атмосферное давление - 1026 Па, влажность воздуха - 50%
 2026-01-28 21:58:45,428 [INFO] classes.city_weather:105 - Файл успешно сохранен в C:\Users\Vlad\PycharmProjects\weather_data\results\weather_2026-01-28T21-58-43.csv
+2026-03-22 13:52:13,825 [INFO] root:7 - Старт программы
+2026-03-22 13:52:13,826 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 13:52:13,826 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 13:52:13,826 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 13:52:13,826 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 13:52:14,021 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 13:52:14,021 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 13:52:14,202 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 13:52:14,202 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 13:52:14,409 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 13:52:14,409 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 13:52:14,591 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 13:52:14,592 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 13:52:14,775 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 13:52:14,775 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 13:52:14,776 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 13:52:14,776 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 13:52:14,776 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 13:52:15,072 [INFO] classes.city_weather:106 -  2026-03-22T13:52:14 -- В городе Moscow температура воздуха 5.23C°, атмосферное давление - 1026 Па, влажность воздуха - 45%
+2026-03-22 13:52:15,352 [INFO] classes.city_weather:106 -  2026-03-22T13:52:14 -- В городе Dublin температура воздуха 8.22C°, атмосферное давление - 1016 Па, влажность воздуха - 83%
+2026-03-22 13:52:15,629 [INFO] classes.city_weather:106 -  2026-03-22T13:52:14 -- В городе Tokio температура воздуха 15.07C°, атмосферное давление - 1021 Па, влажность воздуха - 50%
+2026-03-22 13:52:15,909 [INFO] classes.city_weather:106 -  2026-03-22T13:52:14 -- В городе London температура воздуха 3.68C°, атмосферное давление - 1016 Па, влажность воздуха - 92%
+2026-03-22 13:52:16,194 [INFO] classes.city_weather:106 -  2026-03-22T13:52:14 -- В городе Washington температура воздуха 11.7C°, атмосферное давление - 1013 Па, влажность воздуха - 78%
+2026-03-22 13:52:16,200 [INFO] classes.city_weather:119 - Файл успешно сохранен в C:\Users\Vlad\PycharmProjects\weather_data\results\weather_2026-03-22T13-52-14.csv
+2026-03-22 13:56:53,665 [INFO] root:7 - Старт программы
+2026-03-22 13:56:53,665 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 13:56:53,665 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 13:56:53,665 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 13:56:53,665 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 13:57:15,461 [ERROR] classes.city_list:80 - Не удалось выполнить операцию. Ошибка HTTPConnectionPool(host='api.openweathermap.org', port=80): Read timed out. (read timeout=None)
+2026-03-22 13:57:41,806 [INFO] root:7 - Старт программы
+2026-03-22 13:57:41,806 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 13:57:41,806 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 13:57:41,807 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 13:57:41,807 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 13:58:01,165 [ERROR] classes.city_list:80 - Не удалось выполнить операцию. Ошибка HTTPConnectionPool(host='api.openweathermap.org', port=80): Read timed out. (read timeout=None)
+2026-03-22 14:03:49,653 [INFO] root:7 - Старт программы
+2026-03-22 14:03:49,653 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:03:49,653 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:03:49,653 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:03:49,653 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:03:49,847 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:03:49,847 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:03:50,031 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:03:50,031 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:03:50,215 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:03:50,216 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:03:50,400 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:03:50,400 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:03:50,584 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:03:50,585 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:03:50,585 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:03:50,585 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:03:50,585 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:03:50,867 [INFO] classes.city_weather:106 -  2026-03-22T14:03:50 -- В городе Moscow температура воздуха 4.29C°, атмосферное давление - 1026 Па, влажность воздуха - 73%
+2026-03-22 14:03:51,158 [INFO] classes.city_weather:106 -  2026-03-22T14:03:50 -- В городе Dublin температура воздуха 8.57C°, атмосферное давление - 1016 Па, влажность воздуха - 82%
+2026-03-22 14:03:51,446 [INFO] classes.city_weather:106 -  2026-03-22T14:03:50 -- В городе Tokio температура воздуха 15.05C°, атмосферное давление - 1021 Па, влажность воздуха - 50%
+2026-03-22 14:03:51,724 [INFO] classes.city_weather:106 -  2026-03-22T14:03:50 -- В городе London температура воздуха 3.71C°, атмосферное давление - 1016 Па, влажность воздуха - 92%
+2026-03-22 14:03:52,006 [INFO] classes.city_weather:106 -  2026-03-22T14:03:50 -- В городе Washington температура воздуха 11.53C°, атмосферное давление - 1012 Па, влажность воздуха - 79%
+2026-03-22 14:03:52,009 [INFO] classes.city_weather:119 - Файл успешно сохранен в C:\Users\Vlad\PycharmProjects\weather_data\results\weather_2026-03-22T14-03-50.csv
+2026-03-22 14:16:34,049 [INFO] root:7 - Старт программы
+2026-03-22 14:16:34,049 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:16:34,050 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:16:34,050 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:16:34,050 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:16:34,277 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:16:34,277 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:16:34,474 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:16:34,474 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:16:34,665 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:16:34,665 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:16:34,854 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:16:34,854 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:16:35,055 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:16:35,055 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:16:35,056 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:16:35,056 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:16:35,056 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:16:35,340 [INFO] classes.city_weather:106 -  2026-03-22T14:16:35 -- В городе Moscow температура воздуха 5.29C°, атмосферное давление - 1026 Па, влажность воздуха - 73%
+2026-03-22 14:16:35,653 [INFO] classes.city_weather:106 -  2026-03-22T14:16:35 -- В городе Dublin температура воздуха 8.71C°, атмосферное давление - 1016 Па, влажность воздуха - 82%
+2026-03-22 14:16:35,939 [INFO] classes.city_weather:106 -  2026-03-22T14:16:35 -- В городе Tokio температура воздуха 15.06C°, атмосферное давление - 1021 Па, влажность воздуха - 51%
+2026-03-22 14:16:36,220 [INFO] classes.city_weather:106 -  2026-03-22T14:16:35 -- В городе London температура воздуха 4.07C°, атмосферное давление - 1016 Па, влажность воздуха - 91%
+2026-03-22 14:16:36,613 [INFO] classes.city_weather:106 -  2026-03-22T14:16:35 -- В городе Washington температура воздуха 11.54C°, атмосферное давление - 1012 Па, влажность воздуха - 80%
+2026-03-22 14:16:36,614 [ERROR] classes.city_weather:129 - Ошибка: module 'datetime' has no attribute 'utcnow'
+2026-03-22 14:20:42,910 [INFO] root:7 - Старт программы
+2026-03-22 14:20:42,910 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:20:42,911 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:20:42,911 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:20:42,911 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:20:43,135 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:20:43,135 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:20:43,350 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:20:43,350 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:20:43,535 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:20:43,535 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:20:43,733 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:20:43,733 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:20:43,937 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:20:43,937 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:20:43,937 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:20:43,937 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:20:43,938 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:20:43,938 [ERROR] classes.city_weather:129 - Ошибка: type object 'datetime.datetime' has no attribute 'datetime'
+2026-03-22 14:27:44,128 [INFO] root:7 - Старт программы
+2026-03-22 14:27:44,128 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:27:44,128 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:27:44,128 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:27:44,128 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:27:44,352 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:27:44,352 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:27:44,537 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:27:44,537 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:27:44,722 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:27:44,722 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:27:44,905 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:27:44,905 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:27:45,092 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:27:45,092 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:27:45,092 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:27:45,092 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:27:45,093 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:27:45,093 [ERROR] classes.city_weather:129 - Ошибка: type object 'datetime.datetime' has no attribute 'datetime'
+2026-03-22 14:30:54,152 [INFO] root:7 - Старт программы
+2026-03-22 14:30:54,152 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:30:54,153 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:30:54,153 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:30:54,153 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:30:54,361 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:30:54,361 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:30:54,544 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:30:54,545 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:30:54,725 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:30:54,725 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:30:54,910 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:30:54,910 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:30:55,092 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:30:55,092 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:30:55,093 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:30:55,093 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:30:55,093 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:30:55,378 [INFO] classes.city_weather:106 -  2026-03-22T14:30:55 -- В городе Moscow температура воздуха 5.29C°, атмосферное давление - 1026 Па, влажность воздуха - 69%
+2026-03-22 14:30:55,656 [INFO] classes.city_weather:106 -  2026-03-22T14:30:55 -- В городе Dublin температура воздуха 8.95C°, атмосферное давление - 1016 Па, влажность воздуха - 81%
+2026-03-22 14:30:55,938 [INFO] classes.city_weather:106 -  2026-03-22T14:30:55 -- В городе Tokio температура воздуха 14.84C°, атмосферное давление - 1021 Па, влажность воздуха - 54%
+2026-03-22 14:30:56,216 [INFO] classes.city_weather:106 -  2026-03-22T14:30:55 -- В городе London температура воздуха 4.09C°, атмосферное давление - 1016 Па, влажность воздуха - 91%
+2026-03-22 14:30:56,502 [INFO] classes.city_weather:106 -  2026-03-22T14:30:55 -- В городе Washington температура воздуха 11.48C°, атмосферное давление - 1012 Па, влажность воздуха - 80%
+2026-03-22 14:30:56,507 [INFO] classes.city_weather:121 - Файл успешно сохранен в C:\Users\Vlad\PycharmProjects\weather_data\results\weather_2026-03-22T14-30-55.csv
+2026-03-22 14:34:04,903 [INFO] root:7 - Старт программы
+2026-03-22 14:34:04,903 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin'] 
+2026-03-22 14:34:04,903 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio'] 
+2026-03-22 14:34:04,903 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London'] 
+2026-03-22 14:34:04,903 [INFO] classes.city_list:40 - Город успешно добавлен. Текущий лист городов: ['Moscow', 'Dublin', 'Tokio', 'London', 'Washington'] 
+2026-03-22 14:34:05,099 [INFO] classes.city_list:75 - Координаты города Moscow = 55.7504461; 37.6174943
+2026-03-22 14:34:05,099 [INFO] classes.city_list:76 - {'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}
+2026-03-22 14:34:05,285 [INFO] classes.city_list:75 - Координаты города Dublin = 53.3498006; -6.2602964
+2026-03-22 14:34:05,286 [INFO] classes.city_list:76 - {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}
+2026-03-22 14:34:05,469 [INFO] classes.city_list:75 - Координаты города Tokio = 35.6768601; 139.7638947
+2026-03-22 14:34:05,469 [INFO] classes.city_list:76 - {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}
+2026-03-22 14:34:05,655 [INFO] classes.city_list:75 - Координаты города London = 51.5073219; -0.1276474
+2026-03-22 14:34:05,655 [INFO] classes.city_list:76 - {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}
+2026-03-22 14:34:05,840 [INFO] classes.city_list:75 - Координаты города Washington = 38.8950368; -77.0365427
+2026-03-22 14:34:05,840 [INFO] classes.city_list:76 - {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}
+2026-03-22 14:34:05,841 [INFO] classes.city_list:87 - Данные сохранены в cities_locations.json
+2026-03-22 14:34:05,841 [INFO] classes.city_weather:53 - Лист заполнен успешно:[{'city_name': 'Moscow', 'city_lat': '55.7504461', 'city_lon': '37.6174943'}, {'city_name': 'Dublin', 'city_lat': '53.3498006', 'city_lon': '-6.2602964'}, {'city_name': 'Tokio', 'city_lat': '35.6768601', 'city_lon': '139.7638947'}, {'city_name': 'London', 'city_lat': '51.5073219', 'city_lon': '-0.1276474'}, {'city_name': 'Washington', 'city_lat': '38.8950368', 'city_lon': '-77.0365427'}] 
+2026-03-22 14:34:05,841 [INFO] classes.city_weather:55 - Количество элементов в листе = 5
+2026-03-22 14:34:06,125 [INFO] classes.city_weather:106 -  2026-03-22T14:34:05 -- В городе Moscow температура воздуха 5.29C°, атмосферное давление - 1026 Па, влажность воздуха - 69%
+2026-03-22 14:34:06,404 [INFO] classes.city_weather:106 -  2026-03-22T14:34:05 -- В городе Dublin температура воздуха 8.95C°, атмосферное давление - 1016 Па, влажность воздуха - 81%
+2026-03-22 14:34:06,692 [INFO] classes.city_weather:106 -  2026-03-22T14:34:05 -- В городе Tokio температура воздуха 14.73C°, атмосферное давление - 1021 Па, влажность воздуха - 56%
+2026-03-22 14:34:06,971 [INFO] classes.city_weather:106 -  2026-03-22T14:34:05 -- В городе London температура воздуха 4.22C°, атмосферное давление - 1017 Па, влажность воздуха - 91%
+2026-03-22 14:34:07,249 [INFO] classes.city_weather:106 -  2026-03-22T14:34:05 -- В городе Washington температура воздуха 11.48C°, атмосферное давление - 1012 Па, влажность воздуха - 80%
+2026-03-22 14:34:07,252 [INFO] classes.city_weather:121 - Файл успешно сохранен в C:\Users\Vlad\PycharmProjects\weather_data\results\weather_2026-03-22T14-34-05.csv

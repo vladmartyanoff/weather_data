@@ -1,5 +1,5 @@
 import json
-import datetime
+from datetime import datetime, timezone
 
 from numpy.ma.core import append
 
@@ -15,9 +15,12 @@ from config.db_connection import db_connection_url
 from classes.table import Base, City_weather_table
 
 #Создаем соединение с базой данных
-engine = create_engine(f'{db_connection_url}')
+try:
+    engine = create_engine(f'{db_connection_url}')
+    Base.metadata.create_all(engine)
 
-Base.metadata.create_all(engine)
+except Exception as e:
+    logger.error(f"Ошибка соединения с базой данных {e}")
 
 #Задаем логирование для класса
 logger = logging.getLogger("classes.city_weather")
@@ -66,7 +69,7 @@ class City_weather():
                 # Обнуляем лист класса перед началом работы
                 self.__weather_list = []
                 # Делаем запрос на текущее время
-                current_date_time = str(datetime.datetime.now().isoformat(timespec='seconds'))
+                current_date_time = datetime.now().isoformat(timespec='seconds')
                 # Заменяем ":" в строке времени на "-" поскольку в их нельзя использовать в Windows
                 safe_filename = re.sub(r'[:/]', "-", current_date_time)
                 # Начинаем цил обработки значений из листа
@@ -111,11 +114,13 @@ class City_weather():
                 csv_path = os.path.join(results_directory, csv_filename)
                 # Переводим лист в датафрейм
                 data_framed_list = pd.DataFrame(self.__weather_list)
+                # Добавляем к записи текущую дату и время
+                data_framed_list['timestamp'] = datetime.now(timezone.utc).replace(microsecond=0)
                 # Записываем файл и отчитываемся о выполнении
                 data_framed_list.to_csv(csv_path, index=False, encoding="utf-8")
                 logger.info(f"Файл успешно сохранен в {csv_path}")
                 # Записываем в базу данных и отчитываемся о выполнении
-                try: data_framed_list.to_sql('City_weather_data', engine, if_exists='append', index=False, method='multi')
+                try: data_framed_list.to_sql('city_weather_data', engine, if_exists='append', index=False, method='multi')
                 except Exception as e:
                     logger.error(f"Ошибка записи в базу данных {e}")
             else:
